@@ -11,11 +11,10 @@ export default function About() {
             incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
           <button className='btn'>Read more</button>
-          </div>
-          <div className='image'>
-            <img src="/img/website.png" alt="about us" />
-            <h1>ksht</h1>
-          </div>
+        </div>
+        <div className='image'>
+          <img src="/images/website.png" alt="about us" />
+        </div>
 
       </div>
     </section>
