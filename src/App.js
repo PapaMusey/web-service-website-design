@@ -7,6 +7,7 @@ import Team from './components/Team';
 import Contact from './components/Contact';
 import FAQ from './components/FAQ';
 import Nav from './components/Nav';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Team />
       <Contact />
       <FAQ />
+      <Footer />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 export default function Nav() {
 
@@ -6,8 +6,23 @@ export default function Nav() {
     function toggleHamMenu() {
         setHam(prevHam => !prevHam)
     }
+
+    const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 30) { // adjust value for when to change color
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
     return (
-        <header className='header'>
+        <header className={scrolled ? "header scrolled" : "header"}>
             <a href='#' className='logo'><i className='fas fa-magic'></i>Design</a>
             <div 
             className={ham ? "fas fa-times" : "fas fa-bars"} 

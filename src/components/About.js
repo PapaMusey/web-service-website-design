@@ -1,6 +1,8 @@
 import React from 'react'
 
 export default function About() {
+
+
   return (
     <section id='about' className='about'>
       <h1 className='heading'>About Us </h1>
@@ -12,6 +14,7 @@ export default function About() {
             exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
           <button className='btn'>Read more</button>
         </div>
+       
         <div className='image'>
           <img src="/images/website.png" alt="about us" />
         </div>
