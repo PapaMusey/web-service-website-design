@@ -8,6 +8,8 @@ import Contact from './components/Contact';
 import FAQ from './components/FAQ';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+import { faqData } from './components/faqData';
+import FAQAccordion from './components/FAQAccordion';
 
 
 function App() {

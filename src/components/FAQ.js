@@ -1,6 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
+// import { styled } from '@mui/material/styles';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+// import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIos';
+import Typography from '@mui/material/Typography';
+import faqData from './faqData';
+import FAQAccordion from './FAQAccordion.js';
+
 
 export default function FAQ() {
+
+  const [expanded, setExpanded] = useState(false);
+
+  const handleChange = (panel) => (event, newExpanded) => {
+    setExpanded(newExpanded ? panel : false);
+  };
+
   return (
     <section id='faq' className='faq'>
       <h1 className='heading'> FAQ</h1>
@@ -10,46 +26,18 @@ export default function FAQ() {
           <img src='images/faq.png' alt='' />
         </div>
         <div className='accordion-container'>
-          <div className='accordion'>
-            <div className='accordion-header'>
-              <span>+</span>
-              <h3>How much will it cost?</h3>
-              <div className='accordion-body'>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className='accordion'>
-            <div className='accordion-header'>
-              <span>+</span>
-              <h3>How long does it take to design?</h3>
-              <div className='accordion-body'>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className='accordion'>
-            <div className='accordion-header'>
-              <span>+</span>
-              <h3>Is it SEO friendly?</h3>
-              <div className='accordion-body'>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </div>
-            </div>
+          <div>
+            {faqData.map((item) => (
+          <FAQAccordion
+            key={item.panel}
+            expanded={expanded}
+            handleChange={handleChange}
+            {...item}
+          />
+        ))}
           </div>
         </div>
+
       </div>
     </section>
   )

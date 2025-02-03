@@ -31,11 +31,11 @@ export default function Nav() {
             <nav className={ham ? "navbar active" : "navbar"}>
                 <ul>
                     <li><a href='#home'>Home</a></li>
-                    <li><a href='#About'>About</a></li>
-                    <li><a href='#Services'>Services</a></li>
-                    <li><a href='#Team'>Team</a></li>
-                    <li><a href='#Contact'>Contact</a></li>
-                    <li><a href='#FAQ'>FAQ</a></li>
+                    <li><a href='#about'>About</a></li>
+                    <li><a href='#service'>Services</a></li>
+                    <li><a href='#team'>Team</a></li>
+                    <li><a href='#contact'>Contact</a></li>
+                    <li><a href='#faq'>FAQ</a></li>
                 </ul>
             </nav>
         </header>
