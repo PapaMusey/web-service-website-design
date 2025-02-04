@@ -430,14 +430,26 @@ button {
   font-size: 1.6rem;
 }
 
-.contact .row .form-container .inputBox {
+/* .contact .row .form-container .inputBox {
   width: 100%;
   display: flex;
   justify-content: space-between;
+} */
+
+.contact .row .form-container .names-container {
+  display: flex;
+  gap: 1rem;
+
+}
+.contact .row .form-container .names-container .first-name,.last-name  {
+  width: 50%;
+}
+.contact .row .form-container .names-container .last-name {
+  width: 50%;
 }
 
 .inputBox input {
-  width: 49%;
+  width: 100%;
 }
 
 input[type="email"],
@@ -460,6 +472,18 @@ button {
 
 button:hover {
   opacity: .8;
+}
+
+.contact .row .form-container .error {
+
+  color: red;
+  font-size: 1.2rem;
+}
+
+.contact .row .form-container .success {
+  color: green;
+  margin-top: 10px;
+  font-size: 1.2rem;
 }
 
 .faq {
@@ -485,7 +509,8 @@ button:hover {
   width: 50vw;
   text-align: left;
 }
-.faq .row .accordion{
+
+.faq .row .accordion {
   border-radius: 0.6rem;
 }
 
@@ -536,6 +561,7 @@ button:hover {
 .faq .row .accordion-container .accordion .accordion-body {
   color: #444;
   font-size: 1.3rem;
+  /* display: none; */
   background-color: #ffffff;
 }
 

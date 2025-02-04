@@ -26,7 +26,7 @@ export default function FAQ() {
           <img src='images/faq.png' alt='' />
         </div>
         <div className='accordion-container'>
-          <div>
+          
             {faqData.map((item) => (
           <FAQAccordion
             key={item.panel}
@@ -35,7 +35,7 @@ export default function FAQ() {
             {...item}
           />
         ))}
-          </div>
+          
         </div>
 
       </div>
