@@ -475,15 +475,14 @@ button:hover {
 }
 
 .contact .row .form-container .error {
-
   color: red;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .contact .row .form-container .success {
   color: green;
   margin-top: 10px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .faq {
