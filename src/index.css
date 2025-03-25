@@ -190,6 +190,14 @@ body {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .home .fa-cog,
+  .home .nut1,
+  .home .nut2 {
+    animation: none !important;
+  }
+}
+
 .about {
   min-height: 100vh;
   width: 100vw;
@@ -231,20 +239,6 @@ body {
   opacity: .2;
 }
 
-/* .about::before{
-height:50rem;
-width: 50rem;
-background: #ccc;
-bottom: -20rem; left: -10rem;
-}
-
-.about::after{
-  height:60rem;
-  width: 60rem;
-  background:var(--color);
-  top: -10rem; right: -10rem;
-  } */
-
 .btn {
   outline: none;
   border-radius: 5rem;
@@ -264,7 +258,6 @@ bottom: -20rem; left: -10rem;
 
 .header.scrolled {
   background-color: #6C5CE7 !important;
-  /* color when scrolled */
 }
 
 .service {
@@ -303,7 +296,6 @@ bottom: -20rem; left: -10rem;
 .team {
   min-height: 100vh;
   width: 100vw;
-  /* align-content: center; */
   text-align: center;
   background-color: #222;
 }
@@ -406,7 +398,6 @@ bottom: -20rem; left: -10rem;
 }
 
 .contact .row .image img {
-  /* height: 70vh; */
   width: 50vw;
 }
 
@@ -429,12 +420,6 @@ button {
   margin: 1rem 0;
   font-size: 1.6rem;
 }
-
-/* .contact .row .form-container .inputBox {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-} */
 
 .contact .row .form-container .names-container {
   display: flex;
@@ -500,7 +485,6 @@ button:hover {
 }
 
 .faq .row .image img {
-  /* height: 70vh; */
   width: 40vw;
 }
 
@@ -513,12 +497,6 @@ button:hover {
   border-radius: 0.6rem;
 }
 
-/* .faq .row .accordion-container .accordion .accordion-header{
-  background-color: var(--color);
-  margin: 1rem 0;
-  box-shadow:.1rem .1rem .3rem rgba (0,0,0,0.3);
-  cursor: pointer;
-} */
 .faq .row .accordion-container .accordion-summary {
   background-color: var(--color);
   margin: 1rem 0;
@@ -526,41 +504,15 @@ button:hover {
   cursor: pointer;
 }
 
-/* .faq .row .accordion-container .accordion .accordion-header span {
-  display: inline-block;
-  text-align: center;
-  height: 4rem;
-  width: 5rem;
-  line-height: 4rem;
-  font-size: 2rem;
-  background: #fff;
-  color: #333;
-  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-} */
-
 .faq .row .accordion-container .accordion-summary span {
-  /* display: inline-block; */
-  /* text-align: center; */
-  /* height: 4rem;
-  width: 5rem; */
-  /* background: #fff ; */
   line-height: 4rem;
   font-size: 1.5rem;
   color: #d7d7d7;
 }
 
-/* .faq .row .accordion-container .accordion .accordion-header h3 {
-  display: inline;
-  color: #fff;
-  font-weight: 400;
-  padding-left: .5rem;
-  font-size: 1.5rem;
-} */
-
 .faq .row .accordion-container .accordion .accordion-body {
   color: #444;
   font-size: 1.3rem;
-  /* display: none; */
   background-color: #ffffff;
 }
 
@@ -698,7 +650,6 @@ button:hover {
   }
 
   .faq .row {
-    /* padding: 0 1rem; */
     margin-bottom: 4rem;
     flex-flow: column;
   }
